@@ -11,7 +11,8 @@
 function mySimpleArray() {
   // Simply return an array literal from this function
   // with any number of items
-  return 0
+
+  return [0]
 }
 
 // There are two ways we've learned to access
@@ -20,28 +21,31 @@ function mySimpleArray() {
 //   2. destructuring
 // Write a function that takes an array and
 // returns the first item using one of those ways
-function head1() {
-  return 0
+indexArray = ['x', 'y', 'z']
+function head1(indexArray) {
+  return indexArray[0]
 }
 
 // Write a function that does the same as the function
 // above, (that is, it takes an array and returns the
 // first item), but use the other approach
-function head2() {
-  return 0
+function head2(indexArray) {
+  const [first] = indexArray
+  return first
 }
 
 // Write a function that takes an array and returns
 // an array containing all but the first item
-function tail1() {
-  return 0
+function tail1(indexArray) {
+  const [first, ...rest] = indexArray
+  return rest
 }
 
 // Write a function similar to head1 & head2 *but*
 // using the *arguments passed into the function*
 // (simply return the first argument)
-function head3() {
-  return 0
+function head3(indexArray) {
+  return indexArray
 }
 
 // Write a function that takes any number of arguments
@@ -55,7 +59,7 @@ function countMyArgs() {
 // using the *arguments passed into the function*
 // (return all but the first argument as an array)
 // see JavaScript Allongé, p.89 for help
-function tail2() {
+function tail2(indexArray) {
   return 0
 }
 
