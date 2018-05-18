@@ -51,16 +51,16 @@ function head3(indexArray) {
 // Write a function that takes any number of arguments
 // and returns the number of arguments passed in
 // (hints: argument gathering, p.89 and .length, p.77)
-function countMyArgs() {
-  return 0
+function countMyArgs(...indexArray) {
+  return indexArray.length
 }
 
 // Write a function similar to tail1 *but*
 // using the *arguments passed into the function*
 // (return all but the first argument as an array)
 // see JavaScript Allongé, p.89 for help
-function tail2(indexArray) {
-  return 0
+function tail2(first, ...rest) {
+  return rest
 }
 
 // Write a function that takes an array and does the following:
@@ -69,10 +69,13 @@ function tail2(indexArray) {
 // 3. otherwise, return the length of the array
 // 4. the function should never return 0
 // Feel free to use if/else [p.31] or a ternary [p.77]
-function howMany() {
-  return 0
+function howMany(arr) {
+  if (arr.length === 0) {
+    return `Empty`
+  } else {
+    return arr.length
+  }
 }
-
 module.exports = {
   countMyArgs,
   head1,
